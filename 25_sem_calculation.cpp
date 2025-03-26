@@ -1,66 +1,56 @@
-//Semester Calculation
 #include <iostream>
-#include <vector>
 using namespace std;
 
-class Student
+class stduent
 {
     private:
     string name;
-    vector<vector<int>> marks;
-    vector<int> semTotals;
-    vector<float> semPercentages;
-    int overallTotalMarks=0;
-    float overallPercentage=0.0;
-    int totalSubjects=0;
+    int marks[6][6];
+    int semTotal[6];
+    float semPercentage[6];
+    int overallTotalMarks = 0;
+    float overallPercentage = 0.0;
+    int totalSemester = 0;
 
     public:
+
     void getData()
     {
-        cout<<"Enter the Name of Student : ";
+        cout<<"Enter Student name : ";
         cin>>name;
-        int sem = 1;
-        char choice;
 
-        while(sem <= 6)
+        char choice;
+        for(int sem = 0; sem < 6; sem++)
         {
-            cout<<"Do you have Semester "<<sem<< " Marks ? (Y/N) : ";
+            cout<<"Do you have Semester "<<(sem + 1) << " marks ? (y/n) : ";
             cin>>choice;
-            if(choice == 'N' || choice == 'n')
+            if(choice == 'n' || choice == 'N')
             {
                 break;
             }
-            vector<int> semMarks(6);
-            int semTotal = 0;
-            cout<<"Enter Marks of 6 Subjects in Semester "<<sem<<" : ";
-            for(int i=0;i<6;i++)
+            int sum = 0;
+            cout<<"Enter marks for 6 subjects in Semester "<< (sem + 1)<< " : ";
+            for(int sub = 0; sub < 6; sub++)
             {
-                cin>>semMarks[i];
-                semTotal += semMarks[i];
+                cin>>marks[sem][sub];
+                sum += marks[sem][sub];
             }
-            marks.push_back(semMarks);
-            semTotals.push_back(semTotal);
-            float semPercentage = (float)semTotal /6.0;
-            semPercentages.push_back(semPercentage);
-
-            sem++;
+            semTotal[sem] = sum;
+            semPercentage[sem] = (float)sum / 6.0;
+            totalSemester++;
         }
-        CalculateTotal();
+        calculateOverall();
     }
-
-    void CalculateTotal()
+    void calculateOverall()
     {
         overallTotalMarks = 0;
-        //totalMarks = 0;
-        totalSubjects = 0;
-        for(int i=0;i<semTotals.size();i++)
+        for(int i = 0; i< totalSemester; i++)
         {
-            overallTotalMarks += semTotals[i];
-            totalSubjects += 6;
-        }   
-        if(totalSubjects > 0)
+            overallTotalMarks += semTotal[i];
+        }
+        if(totalSemester > 0)
         {
-            overallPercentage = (float)overallTotalMarks / totalSubjects;
+            overallPercentage = (float)overallTotalMarks / (totalSemester * 6);
         }
         else{
             overallPercentage = 0.0;
@@ -69,34 +59,31 @@ class Student
 
     void display()
     {
-        cout<<"-------------------------"<<endl;
-        cout<<"Student Name  : "<<name<<endl;
-        cout<<"-------------------------"<<endl;
+        cout<<"-----------------------------"<<endl;
+        cout<<"Student Name : "<<name<<endl;
+        cout<<"-----------------------------"<<endl;
 
-        int semNumber = 1;
-        for(size_t i=0;i<marks.size();i++)
+        for(int sem = 0; sem < totalSemester; sem++)
         {
-            cout<<"Semester "<<semNumber << " Marks : \n";
-            for(size_t j=0;j<marks[i].size();j++)
+            cout<<"Semester " << (sem + 1) << " Marks : \n";
+            for(int sub = 0; sub <6; sub++)
             {
-                cout<<"Subject "<<j+1<<" : "<<marks[i][j]<<endl;
+                cout<< "Subject "<<(sub +1)<< " : "<<marks[sem][sub] << endl;
             }
-            cout<<"---------------------------------------"<<endl;
-            cout<<"Semester " << semNumber << " Total : "<<semTotals[i]<<endl;
-            cout<<"Semester " << semNumber << " Pecentage : "<<semPercentages[i]<<endl;
-            cout<<"---------------------------------------"<<endl;
-            semNumber++;
-            
+            cout<<"-----------------------------"<<endl;
+            cout<<"Semester "<<(sem + 1)<<" Total Marks : "<<semTotal[sem]<<endl;
+            cout<<"Semester "<<(sem + 1)<<" Percentage : "<<semPercentage[sem] << "%"<<endl;
+            cout<<"-----------------------------"<<endl;
         }
-        cout<<"Overall Total Marks    : "<<overallTotalMarks<<endl;
-        cout<<"Overall Percentage     : "<<overallPercentage<< "%"<<endl;
-        cout<<"---------------------------------------"<<endl;
+        cout<<"Overall Total Marks : "<<overallTotalMarks<<endl;
+        cout<<"Overall Percentage  : "<<overallPercentage<<endl;
+        cout<<"-----------------------------"<<endl;
     }
 };
 
 int main()
 {
-    Student obj;
+    stduent obj;
     obj.getData();
     obj.display();
     return 0;
