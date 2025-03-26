@@ -76,7 +76,7 @@ class stduent
             cout<<"--------------------------------------"<<endl;
         }
         cout<<"Overall Total Marks    : "<<overallTotalMarks<<endl;
-        cout<<"Overall Percentage     : "<<overallPercentage<<endl;
+        cout<<"Overall Percentage     : "<<overallPercentage<<"%"<<endl;
         cout<<"--------------------------------------"<<endl;
     }
 };
