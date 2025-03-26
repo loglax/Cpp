@@ -59,9 +59,9 @@ class stduent
 
     void display()
     {
-        cout<<"-----------------------------"<<endl;
+        cout<<"--------------------------------------"<<endl;
         cout<<"Student Name : "<<name<<endl;
-        cout<<"-----------------------------"<<endl;
+        cout<<"--------------------------------------"<<endl;
 
         for(int sem = 0; sem < totalSemester; sem++)
         {
@@ -70,14 +70,14 @@ class stduent
             {
                 cout<< "Subject "<<(sub +1)<< " : "<<marks[sem][sub] << endl;
             }
-            cout<<"-----------------------------"<<endl;
+            cout<<"--------------------------------------"<<endl;
             cout<<"Semester "<<(sem + 1)<<" Total Marks : "<<semTotal[sem]<<endl;
-            cout<<"Semester "<<(sem + 1)<<" Percentage : "<<semPercentage[sem] << "%"<<endl;
-            cout<<"-----------------------------"<<endl;
+            cout<<"Semester "<<(sem + 1)<<" Percentage  : "<<semPercentage[sem] << "%"<<endl;
+            cout<<"--------------------------------------"<<endl;
         }
-        cout<<"Overall Total Marks : "<<overallTotalMarks<<endl;
-        cout<<"Overall Percentage  : "<<overallPercentage<<endl;
-        cout<<"-----------------------------"<<endl;
+        cout<<"Overall Total Marks    : "<<overallTotalMarks<<endl;
+        cout<<"Overall Percentage     : "<<overallPercentage<<endl;
+        cout<<"--------------------------------------"<<endl;
     }
 };
 
