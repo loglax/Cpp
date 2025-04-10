@@ -1,0 +1,27 @@
+//Constructor's parameter name is same as data member name
+#include <iostream>
+using namespace std;
+
+class student
+{
+    private:
+    string name;
+    int rollno;
+    public:
+    /*student(string name, int rollno) //Constructor's parameter name is same as data member name
+    {
+        this->name = name; //this pointer is used to access the data member of the class
+        this->rollno = rollno;
+    }*/
+   student(string name, int rollno):name(name), rollno(rollno)
+   {
+    cout<<"Name : "<<name<<endl;
+    cout<<"Roll No : "<<rollno<<endl;
+   }
+};
+
+int main()
+{
+    student obj("Logesh", 25);
+    return 0;
+}
