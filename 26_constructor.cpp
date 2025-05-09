@@ -7,7 +7,7 @@ It is excuted automatically whenever an object of a class is created.
      3. Copy Constructor   
 */
 
-//Default Constructor
+//Default Constructor  //the class name and constructor name are same and give a constructor only public class
 #include <iostream>
 using namespace std;
 

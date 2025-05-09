@@ -14,7 +14,7 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        if(t<a[i])
+        if(t<a[i])// if(t>a[i]) this is for find the smallest number
         {
             t=a[i];
         }

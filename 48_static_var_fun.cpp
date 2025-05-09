@@ -1,3 +1,4 @@
+//Static Variable and Static Function
 #include <iostream>
 using namespace std;
 
@@ -25,6 +26,7 @@ class Student
         return x;
     }
 };
+//static variable
 int Student::x=0;
 int main()
 {

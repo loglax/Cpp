@@ -1,4 +1,6 @@
 // Function Overriding
+// different class and same function name and same parameter redefine in derived class 
+// that is called function overriding
 
 #include <iostream>
 using namespace std;

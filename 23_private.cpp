@@ -4,7 +4,7 @@ using namespace std;
 
 class student
 {
-    private:
+    private: //Private we can access only in the class
     string name;
     int age;
 

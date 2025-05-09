@@ -4,7 +4,7 @@ using namespace std;
 
 class student
 {
-    public:
+    public:// Public we can access anywhere in the program
     string name;
     int age;
 

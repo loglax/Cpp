@@ -1,19 +1,20 @@
-//Member Initializer List
-//Single Value
+// Member Initializer List
+// Single Value
 #include <iostream>
 using namespace std;
 
 class Base
 {
-  private:
+private:
   int x;
-  public:
-  Base(int a):x(a){}
+
+public:
+  Base(int a) : x(a) {}
 
   void print()
-{
-  cout<<"X : "<<x<<endl;
-}
+  {
+    cout << "X : " << x << endl;
+  }
 };
 
 int main()

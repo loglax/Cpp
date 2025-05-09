@@ -1,5 +1,8 @@
 //Virtual function
 /*
+
+Virtual function is a function declared in base class and redefined in derived class.
+
 #include <iostream>
 using namespace std;
 
@@ -28,6 +31,7 @@ int main()
 }
 
 */
+//Virtual function is a function declared in base class and redefined in derived class.
 #include <iostream>
 using namespace std;
 

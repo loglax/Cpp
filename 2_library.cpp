@@ -17,13 +17,13 @@ int main()
             cout<<"\nTotal Fine amount is : "<<days * 1.00<<" Rupees";
         }
     
-        else if(days > 10 && days <= 30)
+    else if(days > 10 && days <= 30)
+        {
+            cout<<"\nPer day Your Fine amount is : 5 Rupees";
+            cout<<"\nTotal Fine amount is : "<<days * 5<<" Rupees";
+        }
+        else
             {
-                cout<<"\nPer day Your Fine amount is : 5 Rupees";
-                cout<<"\nTotal Fine amount is : "<<days * 5<<" Rupees";
+                cout<<"\nYour Membership is Cancelled";
             }
-            else
-                {
-                    cout<<"\nYour Membership is Cancelled";
-                }
 }

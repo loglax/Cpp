@@ -1,4 +1,4 @@
-//Program for armstrong number between 100-999
+//Program for checking the armstrong number between 100-999
 /*
 #include <iostream>
 using namespace std;
@@ -25,7 +25,7 @@ int main()
     return 0;
 }
 */
-//Program for armstrong number between 100-999
+//Program for armstrong number finding between 100-999
 #include <iostream>
 using namespace std;
 
