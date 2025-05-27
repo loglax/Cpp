@@ -12,7 +12,7 @@ int main()
     int l = 5, b = 10, area;
     area = rectangle(l, b);
     cout << "Area of Rectangle : " << area << endl;
-    cout << "New String" << createString(Hello World) << endl;
+    cout << "New String " << createString(Hello World) << endl;
     int ab = 100;
     cout << "The value of Ab : " << concat(a, b) << endl;
     cout << endl;
