@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class stduent
+class student
 {
     private:
     string name;
@@ -83,7 +83,7 @@ class stduent
 
 int main()
 {
-    stduent obj;
+    student obj;
     obj.getData();
     obj.display();
     return 0;

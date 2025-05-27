@@ -20,7 +20,7 @@ class math
 };
 int main()
 {
-    math obj(10,25);//Parameterized Constructor
+    math obj(105,258);//Parameterized Constructor
     obj.add();
     return 0;
 }
