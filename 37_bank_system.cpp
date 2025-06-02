@@ -31,9 +31,9 @@ class account
     void diplayDetails()
     {
         cout<<"-------------------------------"<<endl;
-        cout<<"\nCustomer Name  : "<<name<<endl;
-        cout<<"\nAccount Number : "<<accno<<endl;
-        cout<<"\nAccount Type   : "<<atype<<endl;
+        cout<<"Customer Name  : "<<name<<endl;
+        cout<<"Account Number : "<<accno<<endl;
+        cout<<"Account Type   : "<<atype<<endl;
     }
 };
 class current_account:public account
@@ -43,7 +43,7 @@ class current_account:public account
     public:
     void c_display()
     {
-        cout<<"\nBalance        :"<<balance<<endl;
+        cout<<"Balance        :"<<balance<<endl;
         cout<<"-------------------------------"<<endl;
     }
     void c_deposit()
@@ -57,7 +57,7 @@ class current_account:public account
     void c_withdraw()
     {
         float withdraw;
-        cout<<"\n\nBalance : "<<balance;
+        cout<<"\n\nBalance      : "<<balance;
         cout<<"\nEnter amount to Withdraw : ";
         cin>>withdraw;
         if(withdraw > 1000)
@@ -78,7 +78,7 @@ class saving_account:public account
     public:
     void s_display()
     {
-        cout<<"\nBalance : "<<sav_balance;
+        cout<<"Balance        : "<<sav_balance;
     }
     void s_deposit()
     {
@@ -93,7 +93,7 @@ class saving_account:public account
     void s_withdraw()
     {
         float withdraw;
-        cout<<"\nBalance : "<<sav_balance;
+        cout<<"\nBalance        : "<<sav_balance;
         cout<<"\nEnter amount to withdraw : ";\
         cin>>withdraw;
         if(sav_balance > 500)
@@ -120,7 +120,7 @@ int main()
         s1.getAccountDetails();
         while(1)          //while(1) for infinite loop
         {
-            cout<<"\n\n-------------------------------"<<endl;
+            cout<<"\n-------------------------------"<<endl;
             cout<<"Choose your Choice"<<endl;
             cout<<"1)   Deposit"<<endl;
             cout<<"2)   Withdraw"<<endl;
@@ -139,6 +139,7 @@ int main()
                 s1.s_withdraw();
                 break;
                 case 3:
+                cout<<"-------------------------------"<<endl;
                 s1.s_display();
                 break;
                 case 4:
@@ -176,6 +177,7 @@ int main()
                 c1.c_withdraw();
                 break;
                 case 3:
+                cout<<"-------------------------------"<<endl;
                 c1.c_display();
                 break;
                 case 4:
